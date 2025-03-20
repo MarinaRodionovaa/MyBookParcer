@@ -11,7 +11,7 @@ fun main() {
         Jsoup.connect(link)
             .get()
     println(doc.title())
-    val quotations: Elements = doc.select("div .sc-2aegk7-2.bzpNIu")
+    val quotations: Elements = doc.select("article")
 
     for (quotation: Element in quotations) {
         println("\n${quotation.text()}")
